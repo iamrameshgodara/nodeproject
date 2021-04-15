@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update profile</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    {{> header}}
+    <form action="/profile/update" method='post'>
+        <input type="hidden" name="_METHOD" value="patch" />
+        name: <input type="text" value="{{name}}" name='name'><br>
+        {{!-- Bio: <input type="text" value={{bio}}><br> --}}
+        <button type='submit'> Update</button>
+    </form>
+</body>
+
+</html>
